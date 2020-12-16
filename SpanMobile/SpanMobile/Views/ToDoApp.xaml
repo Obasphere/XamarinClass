@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpanMobile.Views.ToDoApp">
+    <ContentPage.Content>
+        <StackLayout Spacing="13" Padding="15">
+            <Grid>
+                <Frame Padding="10"
+            BorderColor="#570dff"
+            HasShadow="False">
+                    <Entry Placeholder="Enter Todo Item"/>
+                </Frame>
+                <Label
+            FontSize="15"
+            TextColor="#570dff"
+            BackgroundColor="white"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="20,-10,0,0"/>
+            </Grid>
+            <Grid>
+                <Frame Padding="10"
+            BorderColor="#570dff"
+            HasShadow="False">
+                    <Entry Placeholder="Time"/>
+                </Frame>
+                <Label
+            FontSize="25"
+            TextColor="#570dff"
+            BackgroundColor="white"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="20,-10,0,0"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Submit" HorizontalOptions="Start"></Button>
+            </StackLayout>
+            <Frame Padding="10" BorderColor="#570dff" HasShadow="False">
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox VerticalOptions="CenterAndExpand" />
+                    <StackLayout>
+                    <Label Text="Todo Item" FontSize="18"/>
+                    <Label Text="Time" TextColor="Gray" />
+                </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -19,3 +19,4 @@ C:\Users\obain\source\repos\SpanMobile\SpanMobile\SpanMobile\obj\Debug\netstanda
 C:\Users\obain\source\repos\SpanMobile\SpanMobile\SpanMobile\obj\Debug\netstandard2.0\SpanMobile.pdb
 C:\Users\obain\source\repos\SpanMobile\SpanMobile\SpanMobile\obj\Debug\netstandard2.0\Views\Adder.xaml.g.cs
 C:\Users\obain\source\repos\SpanMobile\SpanMobile\SpanMobile\obj\Debug\netstandard2.0\Views\Calculator.xaml.g.cs
+C:\Users\obain\source\repos\SpanMobile\SpanMobile\SpanMobile\obj\Debug\netstandard2.0\Views\ToDoApp.xaml.g.cs

@@ -25,5 +25,10 @@ namespace SpanMobile.Views
         {
             await Shell.Current.GoToAsync("Calculator");
         }
+
+        private async void Bttn_ToDoApp(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ToDoApp");
+        }
     }
 }

@@ -49,6 +49,10 @@
                         Clicked="Bttn_Clicked"
                         BackgroundColor="DarkSeaGreen"
                         TextColor="#fff" />
+                <Button Margin="0,10,0,0" Text="Open ToDoApp"
+                        Clicked="Bttn_ToDoApp"
+                        BackgroundColor="RoyalBlue"
+                        TextColor="#fff" />
             </StackLayout>
         </ScrollView>
     </Grid>

@@ -38,9 +38,9 @@
               TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
 
-        <Label x:Name="resultText" FontSize="28" FontAttributes="Bold" BackgroundColor="AntiqueWhite" Text="3,250 + 740 + 482 - 318"
+        <Label FontSize="28" FontAttributes="Bold" BackgroundColor="AntiqueWhite" Text="3,250 + 740 + 482 - 318"
               TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="2" />
+              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
 
         <Button Text="C" Grid.Row="1" Grid.Column="0"
                BackgroundColor="White" TextColor="Black"

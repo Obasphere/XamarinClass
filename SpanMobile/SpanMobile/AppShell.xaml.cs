@@ -15,6 +15,7 @@ namespace SpanMobile
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(Adder), typeof(Adder));
             Routing.RegisterRoute(nameof(Calculator), typeof(Calculator));
+            Routing.RegisterRoute(nameof(ToDoApp), typeof(ToDoApp));
         }
 
     }
