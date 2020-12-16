@@ -5,45 +5,47 @@
     <ContentPage.Content>
         <StackLayout Spacing="13" Padding="15">
             <Grid>
-                <Frame Padding="10"
-            BorderColor="#570dff"
-            HasShadow="False">
-                    <Entry Placeholder="Enter Todo Item"/>
+                <Frame Padding="10" BorderColor="#570dff" HasShadow="False">
+                    <Editor x:Name="txtTodoText" Placeholder="Enter Todo Item"/>
                 </Frame>
-                <Label
-            FontSize="15"
-            TextColor="#570dff"
-            BackgroundColor="white"
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Margin="20,-10,0,0"/>
+                <Label FontSize="15" TextColor="#570dff" BackgroundColor="white" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,-10,0,0"/>
             </Grid>
             <Grid>
-                <Frame Padding="10"
-            BorderColor="#570dff"
-            HasShadow="False">
-                    <Entry Placeholder="Time"/>
+                <Frame Padding="10" BorderColor="#570dff" HasShadow="False">
+                    <TimePicker x:Name="txtTime"/>
                 </Frame>
-                <Label
-            FontSize="25"
-            TextColor="#570dff"
-            BackgroundColor="white"
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Margin="20,-10,0,0"/>
+                <Label FontSize="25" TextColor="#570dff" BackgroundColor="white" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,-10,0,0"/>
             </Grid>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Submit" HorizontalOptions="Start"></Button>
+                <Button Text="Submit" Clicked="BtnTodo_Clicked" HorizontalOptions="Start"></Button>
             </StackLayout>
-            <Frame Padding="10" BorderColor="#570dff" HasShadow="False">
-                <StackLayout Orientation="Horizontal">
-                    <CheckBox VerticalOptions="CenterAndExpand" />
-                    <StackLayout>
-                    <Label Text="Todo Item" FontSize="18"/>
-                    <Label Text="Time" TextColor="Gray" />
-                </StackLayout>
-                </StackLayout>
-            </Frame>
+            <StackLayout>
+                <Frame Padding="10" BorderColor="#570dff" HasShadow="False" CornerRadius="10">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox VerticalOptions="CenterAndExpand" />
+                        <StackLayout>
+                            <Label Text="Todo Item" TextColor="Black" FontSize="18"/>
+                            <Label Text="Time" TextColor="Gray" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout BindableLayout.ItemsSource="{Binding AllTodo}" BindableLayout.EmptyView="Nothing todo.">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" BorderColor="#570dff" HasShadow="False" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox VerticalOptions="CenterAndExpand" IsChecked="{Binding Done}" />
+                                <StackLayout>
+                                    <Label Text="{Binding TodoText}" TextColor="Black" FontSize="18"/>
+                                    <Label Text="{Binding TodoTime}" TextColor="Gray" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
 
         </StackLayout>
     </ContentPage.Content>
