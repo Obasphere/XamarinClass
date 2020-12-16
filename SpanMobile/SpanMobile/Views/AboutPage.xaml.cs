@@ -20,5 +20,10 @@ namespace SpanMobile.Views
         {
             await Shell.Current.GoToAsync("Adder");
         }
+
+        private async void Bttn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Calculator");
+        }
     }
 }

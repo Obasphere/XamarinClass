@@ -45,6 +45,10 @@
                         Clicked="Button_Clicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="#fff" />
+                <Button Margin="0,10,0,0" Text="Open DamzCal"
+                        Clicked="Bttn_Clicked"
+                        BackgroundColor="DarkSeaGreen"
+                        TextColor="#fff" />
             </StackLayout>
         </ScrollView>
     </Grid>
