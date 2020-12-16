@@ -31,22 +31,24 @@
                 </Frame>
             </StackLayout>
 
-            <StackLayout BindableLayout.ItemsSource="{Binding AllTodo}" BindableLayout.EmptyView="Nothing todo.">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Padding="10" BorderColor="#570dff" HasShadow="False" CornerRadius="10">
-                            <StackLayout Orientation="Horizontal">
-                                <CheckBox VerticalOptions="CenterAndExpand" IsChecked="{Binding Done}" />
-                                <StackLayout>
-                                    <Label Text="{Binding TodoText}" TextColor="Black" FontSize="18"/>
-                                    <Label Text="{Binding TodoTime}" TextColor="Gray" />
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout BindableLayout.ItemsSource="{Binding AllTodo}" BindableLayout.EmptyView="Nothing todo.">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" BorderColor="#570dff" HasShadow="False" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox VerticalOptions="CenterAndExpand" IsChecked="{Binding Done}" CheckedChanged="CheckBox_CheckedChanged" BindingContext="{Binding Id}"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding TodoText}" TextColor="Black" FontSize="18"/>
+                                        <Label Text="{Binding TodoTime}" TextColor="Gray" />
+                                    </StackLayout>
+                                    <!--<button>Delete</button>-->
                                 </StackLayout>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
-
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

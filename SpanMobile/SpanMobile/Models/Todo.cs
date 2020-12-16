@@ -7,10 +7,11 @@ namespace SpanMobile.Models
     public class Todo
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
-        public string Id { get; set; }
-        [MaxLength()]
+        public int Id { get; set; }
+        [MaxLength(500)]
         public string TodoText { get; set; }
+        [MaxLength(10)]
         public string TodoTime { get; set; }
-        public string Done { get; set; }
+        public bool Done { get; set; }
     }
 }
