@@ -8,11 +8,11 @@
             <Entry x:Name="ans" FontSize="Medium" />
             <StackLayout HorizontalOptions="EndAndExpand">
                 <Label Text="Number 1" FontSize="Medium" />
-                <Entry x:Name="num1" FontSize="Medium" />
+                <Entry x:Name="num1" FontSize="Medium" HorizontalTextAlignment="End"/>
             </StackLayout>
             <StackLayout HorizontalOptions="EndAndExpand">
                 <Label Text="Number 2" FontSize="Medium" />
-                <Entry x:Name="num2" FontSize="Medium" Margin="0" />
+                <Entry x:Name="num2" FontSize="Medium" Margin="0" HorizontalTextAlignment="End"/>
             </StackLayout>
             <StackLayout Orientation="Vertical">
                 <Button Text="Calculate" Clicked="Btn_Clicked" HorizontalOptions="FillAndExpand"></Button>

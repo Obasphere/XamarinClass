@@ -23,7 +23,7 @@ namespace SpanMobile.Views
             
 
             var db = new SQLiteConnection(SqlConnectionPath.SqlPath);
-            //db.CreateTable<Todo>();
+            db.CreateTable<Todo>();
             AllTodo = new ObservableCollection<Todo>(db.Table<Todo>().ToList());
            // AllTodo = db.Table<Todo>().ToList();
 
@@ -51,11 +51,11 @@ namespace SpanMobile.Views
             db.Insert(todo);
 
             AllTodo.Add(todo);
-            txtTodoText.Text = "";
+            
             //txtTime = "";
             //AllTodo = db.Table<Todo>().ToList();
-
             await DisplayAlert("Success", $"Added Successfully.", "OK");
+            txtTodoText.Text = "";
         }
 
         private async void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -72,6 +72,25 @@ namespace SpanMobile.Views
             db.Update(todo);
 
             await DisplayAlert("Success", $"Update Successfully", "OK");
+        }
+        protected override void OnDisappearing()
+        {
+            var db = new SQLiteConnection(SqlConnectionPath.SqlPath);
+            base.OnDisappearing();
+            db.UpdateAll(AllTodo);
+        }
+        private async void ButtonDelete_Clicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            int id = (int)button.BindingContext;
+            var db = new SQLiteConnection(SqlConnectionPath.SqlPath);
+            var todo = db.Get<Todo>(id);
+            db.Delete(todo);
+
+            AllTodo.Remove(AllTodo.FirstOrDefault(x => x.Id == id));
+
+            await DisplayAlert("Delete", $"Record Deleted Successfully", "Ok");
+            //await Navigation.PopAsync();
         }
     }
 }

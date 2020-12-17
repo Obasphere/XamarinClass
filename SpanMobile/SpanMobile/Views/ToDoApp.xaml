@@ -42,7 +42,9 @@
                                         <Label Text="{Binding TodoText}" TextColor="Black" FontSize="18"/>
                                         <Label Text="{Binding TodoTime}" TextColor="Gray" />
                                     </StackLayout>
-                                    <!--<button>Delete</button>-->
+                                    <StackLayout Orientation="Horizontal">
+                                        <Button Text="Delete" Clicked="ButtonDelete_Clicked" HorizontalOptions="Start"></Button>
+                                    </StackLayout>
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
